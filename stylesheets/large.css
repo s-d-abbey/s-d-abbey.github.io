@@ -35,7 +35,7 @@
     font-size: 1.4em;
   }
   body .navbar .nav-content, html .navbar .nav-content {
-    display: flex;
+    display: flex !important;
     width: 45%;
     height: 100%;
     align-items: center;
@@ -45,6 +45,7 @@
   body .navbar .nav-content li, html .navbar .nav-content li {
     list-style: none;
     transition: all 0.4s ease;
+    display: flex;
   }
   body .navbar .nav-content li a, html .navbar .nav-content li a {
     text-decoration: none;
@@ -66,7 +67,7 @@
     width: -moz-fit-content;
     width: fit-content;
     height: 100%;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
   }
@@ -77,9 +78,13 @@
     color: var(--primary-color);
     border-radius: 5px;
     font-family: "Space Grotesk";
+    display: flex;
   }
   body .navbar .nav-content .extra a.btn:hover, html .navbar .nav-content .extra a.btn:hover {
     background: rgba(204, 214, 246, 0.0745098039);
+  }
+  body .navbar .nav-content .extra .nav-trigger, html .navbar .nav-content .extra .nav-trigger {
+    display: none;
   }
   body .sidebar, html .sidebar {
     display: none;
@@ -120,7 +125,7 @@
   }
   body .main .content, html .main .content {
     width: 90% !important;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: space-between;
     overflow-y: scroll !important;
@@ -179,7 +184,7 @@
   }
   body .main .content .home-section, html .main .content .home-section {
     width: 100%;
-    height: 88vh !important;
+    height: 100% !important;
     justify-self: center;
     padding: 0 1rem;
     display: flex;
@@ -189,7 +194,7 @@
   }
   body .main .content .home-section .main_content, html .main .content .home-section .main_content {
     width: 100%;
-    height: 58vh !important;
+    height: 88vh !important;
     font-size: 16px;
     display: flex;
     flex-direction: column;
@@ -418,6 +423,7 @@
     padding: 1rem;
     align-items: center;
     margin-top: 2rem;
+    flex-direction: row;
   }
   body .main .content .experience-section .main_content .workplaces .action-buttons, html .main .content .experience-section .main_content .workplaces .action-buttons {
     width: 18%;
@@ -436,7 +442,8 @@
     font-weight: 300;
     box-sizing: border-box;
     letter-spacing: 0.02cm;
-    border-left: 2px solid rgba(136, 146, 176, 0.3960784314);
+    border-bottom: none;
+    border-left: 2px solid rgba(136, 146, 176, 0.3960784314) !important;
     white-space: nowrap;
   }
   body .main .content .experience-section .main_content .workplaces .action-buttons li:hover, html .main .content .experience-section .main_content .workplaces .action-buttons li:hover {
@@ -445,7 +452,8 @@
   body .main .content .experience-section .main_content .workplaces .action-buttons li.active, html .main .content .experience-section .main_content .workplaces .action-buttons li.active {
     background: rgba(204, 214, 246, 0.0666666667);
     color: var(--primary-color);
-    border-left: 2px solid var(--primary-color);
+    border-bottom: none;
+    border-left: 2px solid var(--primary-color) !important;
   }
   body .main .content .experience-section .main_content .workplaces .work-details, html .main .content .experience-section .main_content .workplaces .work-details {
     display: flex;
@@ -920,6 +928,7 @@
   }
   body .main .content footer.footer, html .main .content footer.footer {
     width: 100%;
+    height: 5vh;
     padding: 2rem;
     display: flex;
     flex-direction: column;

@@ -39,7 +39,7 @@
                 }
             }
             .nav-content{
-                display: flex;
+                display: flex !important;
                 width: 45%;
                 height: 100%;
                 align-items: center;
@@ -48,7 +48,7 @@
                 li{
                     list-style: none;
                     transition: all .4s ease;
-    
+                    display: flex;
                    
                     a{
                         text-decoration: none;
@@ -70,7 +70,7 @@
                    
                     width: fit-content;
                     height: 100%;
-                    display: flex;
+                    display: flex !important;
                     align-items: center;
                     justify-content: center;
                     a.btn{
@@ -80,9 +80,13 @@
                         color: var(--primary-color);
                         border-radius: 5px;
                         font-family: 'Space Grotesk';
+                        display: flex;
                         &:hover{
                             background: #ccd6f613;
                         }
+                    }
+                    .nav-trigger{
+                        display: none;
                     }
                 }
             }
@@ -128,7 +132,7 @@
             }
             .content{
                 width: 90% !important;
-                height: 100%;
+                height: 100vh;
                 display: flex;
                 justify-content: space-between;
                 overflow-y: scroll !important;
@@ -197,9 +201,9 @@
                 }
                 .home-section{
                     width: 100%;
-                    height: 88vh !important;
+                    height: 100% !important;
                     justify-self: center;
-                    
+                   
                     padding:0 1rem;
                     display: flex;
                     flex-direction: column;
@@ -208,7 +212,7 @@
                    
                     .main_content{
                         width: 100%;
-                        height:58vh!important;
+                        height:88vh!important;
                         
                         font-size: 16px;
                         display: flex;
@@ -457,6 +461,7 @@
                             padding: 1rem;
                             align-items: center;
                             margin-top: 2rem;
+                            flex-direction: row;
                             .action-buttons{
                                 width: 18%;
                                 height: 100%;
@@ -474,7 +479,8 @@
                                     font-weight: 300;
                                     box-sizing: border-box;
                                     letter-spacing: .02cm;
-                                    border-left: 2px solid #8892b065;
+                                    border-bottom: none;
+                                    border-left: 2px solid #8892b065 !important;
                                     white-space: nowrap;
                                     &:hover{
                                         background: #ccd6f611;
@@ -483,7 +489,8 @@
                                 li.active{
                                     background: #ccd6f611;
                                     color: var(--primary-color);
-                                    border-left: 2px solid var(--primary-color);
+                                    border-bottom: none;
+                                    border-left: 2px solid var(--primary-color) !important;
                                 }
                             }
                             .work-details{
@@ -990,6 +997,8 @@
                 }
                 footer.footer{
                     width: 100%;
+                    height: 5vh;
+                   
                     padding: 2rem;
                     display: flex;
                     flex-direction: column;

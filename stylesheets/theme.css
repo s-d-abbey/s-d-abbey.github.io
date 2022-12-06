@@ -332,6 +332,7 @@ body .main .content .home-section, html .main .content .home-section {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
+  margin-bottom: 1rem;
 }
 body .main .content .home-section .main_content, html .main .content .home-section .main_content {
   width: 100%;
@@ -726,7 +727,6 @@ body .main .content .work-section .main_content .project, html .main .content .w
 body .main .content .work-section .main_content .project .project-img, html .main .content .work-section .main_content .project .project-img {
   width: 70%;
   height: 30%;
-  border: 1px solid red;
   padding: 0;
   z-index: 200;
   left: 0;
@@ -840,7 +840,6 @@ body .main .content .work-section .main_content .project_2, html .main .content 
 body .main .content .work-section .main_content .project_2 .project-img, html .main .content .work-section .main_content .project_2 .project-img {
   width: 70%;
   height: 30%;
-  border: 1px solid red;
   padding: 0;
   z-index: 100;
   left: 0;
