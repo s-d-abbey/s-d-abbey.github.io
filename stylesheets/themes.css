@@ -1151,6 +1151,7 @@ body .main .content footer.footer .content small, html .main .content footer.foo
   }
   body .navbar .nav-logo h3, html .navbar .nav-logo h3 {
     color: var(--primary-color);
+    display: flex;
     margin-left: 0.3rem;
     font-size: 1.4em;
   }
