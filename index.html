@@ -25,10 +25,38 @@
             <li><a href="#contact-section"><span>04.</span> Contact</a></li>
             <div class="extra">
                 <a href="docs/my-resume.pdf" download  class="btn">Resume</a>
+                <div class="nav-trigger" id="nav-trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
         
     </nav>
+    <div class="sidebar">
+       
+        <ul class="nav_list">
+           
+            <li><a href="#about-section"><span>01.</span> About</a></li>
+            <li><a href="#experience-section"><span>02.</span> Experience</a></li>
+            <li><a href="#work-section"><span>03.</span> Work</a></li>
+            <li><a href="#contact-section"><span>04.</span> Contact</a></li>
+            <div class="extra">
+                <a href="docs/my-resume.pdf" download  class="btn">Resume</a>
+                
+            </div>
+        </ul>
+        <div class="socials">
+            <a target="_blank" href="https://github.com/s-d-abbey"><i class="bx bxl-github"></i></a>
+            <a target="_blank" href="https://www.instagram.com/s.d.abbey/"><i class="bx bxl-instagram"></i></a>
+            <a target="_blank" href="https://twitter.com/s_d_abbey"><i class="bx bxl-twitter"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/samuel-desmond-abbey-darko-b5586b1b5/"><i class="bx bxl-linkedin"></i></a>
+            <a target="_blank" href="https://stackoverflow.com/users/19025251/s-d-abbey"><i class="bx bxl-stack-overflow"></i></a>
+  
+        </div>
+      
+    </div>
     <div class="main">
         <div class="socials">
             <a target="_blank" href="https://github.com/s-d-abbey"><i class="bx bxl-github"></i></a>
@@ -239,5 +267,28 @@
         
        
     </div>
+
+
+    <script>
+        let nav_trigger = document.querySelector('#nav-trigger');
+        let sidebar = document.querySelector('.sidebar');
+        let nav_item = document.querySelectorAll('.nav_list li')
+        nav_item.forEach(item => {
+            item.addEventListener('click', () => {
+                sidebar.classList.remove('active')
+                nav_trigger.classList.remove('active')
+            })
+                
+            }
+        );
+
+        nav_trigger.onclick = function() {
+            sidebar.classList.toggle('active')
+            nav_trigger.classList.toggle('active')
+        }
+        searchBtn.onclick = function() {
+            sidebar.classList.toggle('active')
+        }
+    </script>
 </body>
 </html>
