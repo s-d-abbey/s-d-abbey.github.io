@@ -1694,7 +1694,6 @@ body .main .content footer.footer .content small, html .main .content footer.foo
   body .main .content .work-section .main_content .project .project-img, html .main .content .work-section .main_content .project .project-img {
     width: 60%;
     height: 100%;
-    border: 1px solid red;
   }
   body .main .content .work-section .main_content .project .project-img a, html .main .content .work-section .main_content .project .project-img a {
     width: 100%;
