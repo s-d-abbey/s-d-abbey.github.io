@@ -1,28 +1,22 @@
-name: Generate xml sitemap
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-on:
-  push:
-    branches: [ master ]
 
-jobs:
-  sitemap_job:
-    runs-on: ubuntu-latest
-    name: Generate a sitemap
+<url>
+  <loc>https://portfolio.sdabbey.website/</loc>
+  <lastmod>2022-12-13T11:49:31+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://portfolio.sdabbey.website/docs/my-resume.pdf</loc>
+  <lastmod>2022-12-13T11:49:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 
-    steps:
-    - name: Checkout the repo
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0 
 
-    - name: Generate the sitemap
-      id: sitemap
-      uses: cicirello/generate-sitemap@v1
-      with:
-        base-url-path: https://portfolio.sdabbey.website/
-
-    - name: Output stats
-      run: |
-        echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
-        echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
-        echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
+</urlset>
